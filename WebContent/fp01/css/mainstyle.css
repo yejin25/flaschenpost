@@ -5,7 +5,10 @@ body{
     background-size: 100vw 100vh;
     background-image: url('../img/send.png');
     z-index: -1;
-    cursor: url('../img/cursor.cur');
+}
+
+html{
+	cursor: url('../img/pen2.png'), auto;
 }
 
 h1{
