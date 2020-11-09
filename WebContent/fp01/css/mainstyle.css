@@ -13,20 +13,69 @@ html{
 
 h1{
 	text-align: left;
-	margin-left: 100px;
-	margin-top: 75px;
+	margin-left: 70px;
+	margin-top: 50px;
 	
 	color: #111453;
 	font-size: 2.5rem;
 }
 
-#letter{
+.letter{
+	position:relative;
 	text-align: center;
-	margin-top: 100px;
 }
 
 #about{
 	margin-top: 50px;
 	margin-left: 100px;
 	font-size: 1rem;
+}
+
+.content{
+	position:absolute;
+	background-color: transparent;
+	border: 0;
+	outline:none;
+	top: 0;
+	width: 700px;
+	height: 300px;
+	cursor: url('../img/pen2.png'), auto;
+}
+
+.send{
+	cursor: url('../img/pen2.png'), auto;
+	outline: none;
+}
+
+#listbox{
+	background-color: transparent;
+	color: white;
+	border: 0px;
+	
+	position: relative;
+	left: 270px;
+
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	background-image:
+	linear-gradient(45deg, transparent 50%, white 50%),
+	linear-gradient(135deg, white 50%, transparent 50%);
+	background-position:
+	calc(100% - 20px) calc(1em + 2px),
+	calc(100% - 15px) calc(1em + 2px),
+	calc(100% - .5em) .5em;
+	background-size:
+	5px 5px,
+	5px 5px,
+	1.5em 1.5em;
+	background-repeat: no-repeat;
 }
