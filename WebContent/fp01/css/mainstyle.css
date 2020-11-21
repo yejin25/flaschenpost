@@ -3,14 +3,22 @@
 
 
 body{
-    background-repeat:no-repeat;
-    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-repeat:no-repeat;
    	background-size: 100% 100%;
+   	background-position: center center;
     background-image: url('../img/send.png');
     z-index: -2;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 h1{
@@ -24,7 +32,7 @@ h1{
 
 .input{
 	width: auto;
-	height: 550px;
+	height: 60vh;
 	text-align: center;
 	margin-top: 3%;
 
@@ -118,3 +126,4 @@ h1{
 	1.5em 1.5em;
 	background-repeat: no-repeat;
 }
+
