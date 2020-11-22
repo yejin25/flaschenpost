@@ -76,7 +76,7 @@
 <div class="output">
     <div class="textOutput">
         <img id="letter" src='img/letter_old2.png'>
-        <textarea id="content" name="oldcontent">
+        <textarea id="content" name="oldcontent" readonly="readonly">  
             <%
                 out.println(executeData);
                 out.flush();
@@ -86,7 +86,7 @@
 </div>
 
 <div class="about">
-    <a href=AboutPage.jsp" style="text-decoration:none; font-size:1.5rem; color:black"> <strong>About</strong></a>
+    <a href="AboutPage.jsp" style="text-decoration:none; font-size:1.5rem; color:black"> <strong>About</strong></a>
     <span style="margin-left:50px">Why make?</span>
     <span style="margin-left:50px">How to Use?</span>
     <span style="margin-left:50px">Who are We?</span>
