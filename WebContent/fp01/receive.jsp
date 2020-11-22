@@ -72,7 +72,6 @@
 
 <body>
 <h1>Flaschenpost</h1>
-
 <div class="output">
     <div class="textOutput">
         <img id="letter" src='img/letter_old2.png'>
