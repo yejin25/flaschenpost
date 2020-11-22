@@ -7,15 +7,18 @@
 
 <%!
     public String getRandomData(String group, String latestInputIndex) {
-        String receiveRandomString = "null";
+        String receiveRandomString = "이런, 아직 작성한 사람이 없나봐요..! 글을 더 써보세요!";
         HashMap<String, Letter> receiveHashMap = new HashMap<String, Letter>();
         try {
             LetterConnection letterConnection = new LetterConnection();
             receiveHashMap = letterConnection.getSelection(Integer.parseInt(group));
-            int randomNum = getRandomNumber(Integer.parseInt(latestInputIndex));
-            Letter receiveLetter = receiveHashMap.get(String.valueOf(randomNum));
-            System.out.println("----- " + randomNum + " " + receiveHashMap.size() + " -----");
-            receiveRandomString = receiveLetter.getContext();
+            if (receiveHashMap.size() != 0) {
+                ArrayList<String> receiveHashMapKeySet = new ArrayList<String>(receiveHashMap.keySet());
+                int randomNum = getRandomNumber(Integer.parseInt(latestInputIndex), receiveHashMapKeySet);
+                Letter receiveLetter = receiveHashMap.get(String.valueOf(randomNum));
+                System.out.println("----- " + randomNum + " " + receiveHashMap.size() + " -----");
+                receiveRandomString = receiveLetter.getContext();
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -23,7 +26,7 @@
         }
         return receiveRandomString;
     }
-    public int getRandomNumber(int index) {
+    public int getRandomNumber(int index, ArrayList<String> receiveKey) {
         int randomnize = 0;
         boolean isTrueNum = true;
         Random random = new Random();
@@ -34,7 +37,7 @@
                 isTrueNum = true;
             } else if (randomnize == index) {
                 isTrueNum = true;
-            } else {
+            } else if (receiveKey.contains(String.valueOf(randomnize))){
                 isTrueNum = false;
                 break;
             }
@@ -83,7 +86,7 @@
 </div>
 
 <div class="about">
-    <a href="AboutPage.jsp" style="text-decoration:none; font-size:1.5rem; color:black"> <strong>About</strong></a>
+    <a href=AboutPage.jsp" style="text-decoration:none; font-size:1.5rem; color:black"> <strong>About</strong></a>
     <span style="margin-left:50px">Why make?</span>
     <span style="margin-left:50px">How to Use?</span>
     <span style="margin-left:50px">Who are We?</span>
