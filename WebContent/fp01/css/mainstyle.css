@@ -32,7 +32,6 @@ h1{
 
 .selection{
 	margin-left: 10%;
-
 }
 
 .textInput{
@@ -83,9 +82,9 @@ h1{
 }
 
 
-#listbox{
+#listbox, #colorListbox, #fontListbox {
 	background-color: transparent;
-	color: white;
+	color: #112653;
 	border: 0px;
 	
 	outline: none;
