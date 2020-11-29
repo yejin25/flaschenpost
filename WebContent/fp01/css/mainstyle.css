@@ -91,9 +91,9 @@ h1{
 }
 
 
-#listbox{
+#listbox, #colorListbox, #fontListbox {
 	background-color: transparent;
-	color: white;
+	color: #5f7ec0;
 	border: 0px;
 	
 	outline: none;

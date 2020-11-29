@@ -96,7 +96,23 @@
     <link href="css/mainstyle.css" rel="stylesheet">
     <title>Flaschenpost</title>
 </head>
+<script>
+    function changeFontSelect(){
+        var selectFont = document.getElementById("fontListbox");
+        var letterFont = selectFont.options[selectFont.selectedIndex].value;
+         
+        var x = document.getElementById("content");
+        x.style.fontFamily = letterFont;
+    }
 
+    function changeColorSelect(){
+        var selectColor = document.getElementById("colorListbox");
+        var letterColor = selectColor.options[selectColor.selectedIndex].value;
+         
+        var x = document.getElementById("content");
+        x.style.color = letterColor;
+    }
+</script>
 <body>
 <div class="app">
 		<div class="background"></div>
@@ -107,18 +123,18 @@
     <div class="input">
 
         <div class="selection">
-            <select id="listbox" name="font">
+            <select id="fontListbox" name="font" onchange="changeFontSelect()">
                 <option value="selected">--Font--</option>
-                <option value='gothic'>고딕</option>
-                <option value="NotoSans">노토산스</option>
-                <option value="gongseo">궁서</option>
+                <option value = 'serif'>serif</option>
+				<option value = "sans-serif">sans</option>
+				<option value = "cursive" >cursive</option>
             </select>
 
-            <select id="listbox" name="color">
+            <select id="colorListbox" name="color" onchange="changeColorSelect()">
                 <option value="selected">--Color--</option>
                 <option value='black'>Black</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
+                <option value = "#5179d1">Blue</option>
+                <option value = "#eb6e5e">Red</option>
             </select>
 
             <select id="listbox" name="group">
