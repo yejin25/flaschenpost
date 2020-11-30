@@ -93,10 +93,10 @@
         <img id="letter" src='img/letter_old2.png'>
         <textarea id="content" name="oldcontent" readonly="readonly">  
             <%
-                doStyle();
                 out.println(executeData);
                 out.flush();
             %>
+            <script>doStyle()</script>
         </textarea>
     </div>
 </div>
