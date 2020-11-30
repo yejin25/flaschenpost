@@ -78,28 +78,30 @@
     <link href="css/receivestyle.css" rel="stylesheet">
     <title>Flaschenpost</title>
 </head>
-<script>
-    function doStyle(){
-        var x = document.getElementById("content");
-        x.style.fontFamily = executeFont;
-        x.style.color = executeColor;
-    }
-</script>
+
 <body>
 <h1>Flaschenpost</h1>
 
 <div class="output">
     <div class="textOutput">
         <img id="letter" src='img/letter_old2.png'>
-        <textarea id="content" name="oldcontent" readonly="readonly">  
+        <textarea id="content" name="oldcontent" readonly="readonly" style="color:red">  
             <%
                 out.println(executeData);
                 out.flush();
             %>
-            <script>doStyle()</script>
+            
         </textarea>
     </div>
 </div>
+<script>
+    function doStyle(){
+        var x = document.getElementById("content");
+        x.style.fontFamily = executeFont;
+        x.style.color = executeColor;
+    }
+    doStyle()
+</script>
 
 <div class="about">
     <a href="AboutPage.jsp" style="text-decoration:none; font-size:1.5rem; color:black"> <strong>About</strong></a>
