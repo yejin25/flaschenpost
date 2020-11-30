@@ -52,7 +52,7 @@
 
 <%
     String letterData[];
-    String executeArr[];<!--text, font, color-->
+    String executeArr[];
     String executeData = "null";
     String executeFont = "serif-sans";
     String executeColor = "black";
@@ -60,7 +60,7 @@
         System.out.println(request.getParameter("letterData"));
         if (request.getParameter("letterData") != null && request.getParameter("letterData") != "null") {
             letterData = request.getParameter("letterData").split("_");
-            executeArr[] = getRandomData(letterData[0], letterData[1]).split("_");
+            executeArr = getRandomData(letterData[0], letterData[1]).split("_");
             executeData = executeArr[0];
             executeFont = executeArr[1];
             executeColor = executeArr[2];
@@ -70,7 +70,6 @@
     }
 %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,15 +78,22 @@
     <link href="css/receivestyle.css" rel="stylesheet">
     <title>Flaschenpost</title>
 </head>
-
+<script>
+    function doStyle(){
+        var x = document.getElementById("content");
+        x.style.fontFamily = executeFont;
+        x.style.color = executeColor;
+    }
+</script>
 <body>
 <h1>Flaschenpost</h1>
 
 <div class="output">
     <div class="textOutput">
         <img id="letter" src='img/letter_old2.png'>
-        <textarea id="content" name="oldcontent" readonly="readonly" style="font-family:executeFont; color:executeColor">  
+        <textarea id="content" name="oldcontent" readonly="readonly">  
             <%
+                doStyle();
                 out.println(executeData);
                 out.flush();
             %>
