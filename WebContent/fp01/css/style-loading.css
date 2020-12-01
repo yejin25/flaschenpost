@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+*{
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	outline: 0;
+ 	margin: 0;
+ 	padding: 0;
+  	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 영역을 넘는 부분은 숨기기 */
+    background-color: #ffffff; /* 배경은 흰색 */
+  }
+  
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loading{
+  margin-top: 3rem; 
+  text-align: center; 
+  font-size: 3.6rem;
+  font-family:"돋움";
+  }
+  
+  .loading span {
+  display: inline-block;
+  margin: 0 -.075em;
+  animation: loading .7s infinite alternate;
+}
+.loading span:nth-child(2) {
+  animation-delay: .1s;
+}
+.loading span:nth-child(3) {
+  animation-delay: .2s;
+}
+.loading span:nth-child(4) {
+  animation-delay: .3s;
+}
+.loading span:nth-child(5) {
+  animation-delay: .4s;
+}
+.loading span:nth-child(6) {
+  animation-delay: .5s;
+}
+.loading span:nth-child(7) {
+  animation-delay: .6s;
+}
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
