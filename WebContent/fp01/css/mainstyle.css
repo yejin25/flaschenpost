@@ -1,9 +1,10 @@
 @charset "UTF-8";
-
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); 
 
 
 body{
     overflow: hidden;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 .background {

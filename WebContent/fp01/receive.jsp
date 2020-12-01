@@ -80,7 +80,7 @@
 </head>
 
 <body>
-<h1>Flaschenpost</h1>
+<h1><a href="main.jsp" style="text-decoration:none; color:#111453">Flaschenpost</a></h1>
 
 <div class="output">
     <div class="textOutput">
