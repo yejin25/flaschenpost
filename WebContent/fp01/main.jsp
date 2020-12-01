@@ -121,7 +121,9 @@ if (letterData != null) {
 	<div class="app">
 		<div class="background"></div>
 		<div class="main">
-			<h1>Flaschenpost</h1>
+			<h1>
+				<a href="main.jsp" style="text-decoration: none; color: #111453">Flaschenpost</a>
+			</h1>
 
 			<form action="#" method="post" id="next">
 				<div class="input">
@@ -168,6 +170,6 @@ if (letterData != null) {
 			</div>
 		</div>
 	</div>
-	
+
 </body>
 </html>

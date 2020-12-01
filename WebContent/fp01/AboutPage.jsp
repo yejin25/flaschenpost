@@ -1,11 +1,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>About page</title>
     <link type="text/css" rel="stylesheet" href="css/About_style.css">
 </head>
-<body background="img/about_background.png">
+<body background="img/about_background.png" onselectstart="return blockSelect()" oncontextmenu="return blockRightClick()">
+
+<script language="javascript">
+function blockRightClick(){
+    
+    return false;
+}
+function blockSelect(){
+  
+    return false;
+}
+</script>
 
 <header>
     <h1>
