@@ -1,6 +1,3 @@
-
-
-  
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.io.*,java.lang.*,java.util.*,java.net.*,java.util.*,java.text.*" %>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
@@ -73,7 +70,6 @@
     }
 %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,20 +80,17 @@
 </head>
 
 <body>
-
-    
-<h1><a href="main.jsp" style="text-decoration:none; color:#111453">Flaschenpost</a></h1>
+<h1>Flaschenpost</h1>
 
 <div class="output">
     <div class="textOutput">
         <img id="letter" src='img/letter_old2.png'>
-        <textarea id="content" name="oldcontent" readonly="readonly" style="font-family:executeFont; color:executeColor">  
-            <% 
+        <textarea id="content" name="oldcontent" readonly="readonly" style="color:<%=executeColor %>; font-family:<%=executeFont %>;">  
+            <%
                 out.println(executeData);
-           		out.println(executeFont);
-           		out.println(executeColor);
                 out.flush();
-            %>
+             %>
+            
         </textarea>
     </div>
 </div>
@@ -108,8 +101,5 @@
     <span style="margin-left:50px">How to Use?</span>
     <span style="margin-left:50px">Who are We?</span>
 </div>
-
 </body>
 </html>
-
-
